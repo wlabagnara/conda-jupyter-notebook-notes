@@ -1,0 +1,62 @@
+
+** JUPYTER NOTEBOOK SETUP **
+
+(Steps to get your notebook up and running with your correct env/kernel)
+
+">" = the conda shell prompt.
+
+> where python  (to list where your python intepreter locations/envs)
+
+(refer to 'conda-cheatsheet.pdf' in my downloads folder...)
+
+> conda create --name <envname>
+
+> conda activate <envname>
+
+> conda list
+> python --version
+  (If no python or packages exist in this env,
+   then do a "> conda install pip" do kick things off and
+   then rerun the above two commands for better results!)
+
+> conda env list
+
+> conda list
+  (assume you installed jupyter in your env already)
+
+> conda install -c anaconda ipykernel 
+ (or if you installed jupyter in your env already, it may have added ipykernel already)
+
+> python -m ipykernel install --user --name=<envname>   (this step is required to have your env kernel ready for your notebook?)
+  ( or ipython kernel install --user --name=<envname> )
+
+> jupyter notebook
+
+	1. Wait for jupyter to launch in browser window
+    2. In jupyter browser window...
+    3. Under "New", look for your env and select it
+       (or under "Change Kernel", look for your env and select it)
+
+> jupyter kernelspec list
+
+> jupyter kernelspec remove <kernelname>
+
+
+JOVIAN
+------
+
+Add the following as the last cell of your notebook cell:
+
+	import jovian
+	jovian.commit()
+	
+DOCTEST
+-------
+
+Add the following at the bottom of the cell you are testing:
+
+	import doctest
+	doctest.testmod()
+	
+
+	
