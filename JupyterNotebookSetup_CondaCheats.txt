@@ -7,7 +7,7 @@
 
 > where python  (to list where your python intepreter locations/envs)
 
-(refer to 'conda-cheatsheet.pdf' in my downloads folder...)
+(refer to 'conda-cheatsheet.pdf'...)
 
 > conda create --name <envname>
 
@@ -16,7 +16,7 @@
 > conda list
 > python --version
   (If no python or packages exist in this env,
-   then do a "> conda install pip" do kick things off and
+   then do a "> conda install pip" to kick things off and
    then rerun the above two commands for better results!)
 
 > conda env list
@@ -27,12 +27,16 @@
 > conda install -c anaconda ipykernel 
  (or if you installed jupyter in your env already, it may have added ipykernel already)
 
+> conda list -e > requirements.txt (generate requirements.txt file)
+> conda env export > <environment-name>.yml 
+> conda env create -f <environment-name>.yml  (creating new env on another machine)
+
 > python -m ipykernel install --user --name=<envname>   (this step is required to have your env kernel ready for your notebook?)
   ( or ipython kernel install --user --name=<envname> )
 
 > jupyter notebook
 
-	1. Wait for jupyter to launch in browser window
+    1. Wait for jupyter to launch in browser window
     2. In jupyter browser window...
     3. Under "New", look for your env and select it
        (or under "Change Kernel", look for your env and select it)
@@ -57,6 +61,4 @@ Add the following at the bottom of the cell you are testing:
 
 	import doctest
 	doctest.testmod()
-	
-
 	
