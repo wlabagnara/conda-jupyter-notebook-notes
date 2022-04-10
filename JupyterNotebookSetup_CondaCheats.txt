@@ -1,5 +1,5 @@
 
-** JUPYTER NOTEBOOK SETUP **
+** JUPYTER NOTEBOOK SETUP, including use of CONDA  **
 
 (Steps to get your notebook up and running with your correct env/kernel)
 
